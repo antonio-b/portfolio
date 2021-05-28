@@ -1,0 +1,446 @@
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+   margin:0;
+   padding:0;
+   border:0;
+   outline:focus;
+   font-size:100%;
+   vertical-align:baseline;
+   background:transparent;
+}
+
+body {
+   line-height:1;
+   font-family: Arial, sans-serif;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+   display:block;
+}
+
+.face-front > a{
+  height:230px;
+}
+
+body, html {
+ height: 100%;
+ width:100%;
+ margin:0;
+ padding:0;
+
+}
+h1 {
+ color: #FFFFFF;
+ text-align: center;
+ margin-top:-8px;
+   padding:10px;
+}
+.nav {
+ overflow:auto;
+ background-color: #FF6600;
+ height: 50px;
+ font-size: 25px;
+ margin-top:0;
+ border-bottom:2px solid black;
+ z-index:2;
+ text-align:center;
+}
+nav a {
+ color:black;
+}
+nav a:hover {
+text-decoration:none;
+color:white;
+}
+.about {
+ background-color: #ffe3b1;
+ height: 450px;
+ width:100%;
+
+}
+.about_me {
+  width:100%;
+ overflow:hidden;
+}
+
+h4{
+ height:75px;
+}
+#count{
+height:25px;
+width:100%;
+text-align:center;
+}
+ul{
+ display:block;
+ position:fixed;
+ left: 22px;
+ top:70px;
+ font-size: 20px;
+ font-weight:bold;
+}
+.landing {
+  margin-top:0;
+  height:100%;
+  background-image: url('sun.jpg');
+  filter: blur(5px);
+ margin-bottom:-30px;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   min-width:350px;
+
+  }
+.intro {
+ padding:15px;
+ vertical-align: middle;
+ color:#FFFFFF;
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%, -50%); /* shift h1 to the left to center */
+ /* background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+border: 3px solid #f1f1f1;
+}
+
+#hell {
+ background-repeat:no-repeat;
+ background-size: cover;
+
+
+}
+.portfolio {
+ display:flex;
+flex-wrap:wrap;
+ background-color: white;
+ height: 300px;
+ width:100%;
+/* transform: rotate(0deg) skew(0deg);*/
+
+}
+
+footer {
+ height:150px;
+ background-color:#ffe3b1;
+}
+.sticky {
+ position: fixed;
+ top: 0;
+ width: 100%;
+}
+
+.sticky , .about {
+ padding-top: 60px;
+}
+.fa-linkedin {
+ background: #007bb5;
+ color: white;
+ margin-left:20px;
+
+}
+.fa {
+
+ font-size: 30px;
+ width: 50px;
+ text-align: center;
+ text-decoration: none;
+ /*margin: 5px 2px;*/
+ border-radius:50%;
+}
+/*img {
+ float: left;
+ margin-left: 5px;
+ margin-right: 8px;
+ display:block;
+ border-radius: 15px 50px;
+
+}*/
+
+.myself {
+ width:170px;
+ height:170px;
+ float: left;
+ margin-left: 5px;
+ margin-right: 8px;
+ display:block;
+ border-radius: 15px 50px;
+}
+
+h2 {
+text-align: center;
+margin-bottom:30px;
+margin-top: 30px;
+flex-basis: 100%;
+}
+
+.project{
+ width:90px;
+ height:90px;
+ margin:5px;
+}
+
+.skills{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center;
+ overflow:hidden;
+}
+
+/*.divide {
+ transform:rotate(05deg);
+}*/
+.project_1_img, .project_2_img {
+  margin: 15px 5px 15px 5px;
+   width:190px;
+ height:190px;
+ border-radius:5px;
+ border:2px solid #FF6600;
+}
+
+.contact{
+ display:flex;
+ flex-wrap: wrap;
+ justify-content:center;
+}
+
+
+ #map {
+ height: 100%;
+ width:100%;
+}
+.container {
+ height:150px;
+}
+
+.footer-copyright{
+ background-color:#ffe3b1;
+
+}
+
+.contain, .book-content{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.contain{
+ width:100%;
+ height:558px;
+ background:#fdfbf4;
+
+}
+.book-content{
+ width: 65%;
+ min-width: 250px;
+ max-width: 600px;
+ height: 430px;
+ position: relative;
+ perspective: 1000px;
+ transition: 1s;
+
+
+}
+
+.project_2_img {
+ height:210px;
+}
+
+.face-back , .face-front{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+
+}
+.book{
+ position:absolute;
+ width: 55%;
+ height: 100%;
+ transition: 1s;
+ transform-style: preserve-3d;
+ transform-origin: left;
+   box-shadow: 5px 5px 8px black;
+
+
+}
+
+.face-front, .face-back{
+ width:100%;
+ height:100%;
+ background: #ffe3b1;
+ padding: 15px;
+ box-sizing: border-box;
+ overflow: hidden;
+
+}
+
+
+
+.face-font{
+ box-shadow: inset 3px 0px 20px -7px black;
+ border-top-left-radius:3px;
+ border-bottom-left-radius: 3px;
+ top:0;
+ left:0;
+
+}
+.face-back{
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform: translateZ(-1px) rotateY(180deg);
+ box-shadow: inset -3px 1px 20px -7px black;
+  border-top-right-radius:3px;
+ border-bottom-right-radius: 3px;
+
+}
+
+#portada{
+ background: url("portfolio.jpg");
+}
+
+#portada-back{
+ background: url("sun.jpg");
+}
+
+#portada,#portada-back{
+background-size: 100% 100%;
+
+}
+
+/*classes javascript*/
+
+.trnsf{
+ transform: translateX(80px);
+}
+
+.trnsf-reset{
+ transform: translateX(0px);
+}
+
+
+
+@media screen and (max-width:800px){
+
+.about{
+  height:825px;
+
+}
+ .project_1_img, .project_2_img {
+  margin: 10px 3px 10px 3px;
+   width:100px;
+ height:100px;
+ border-radius:5px;
+ border:2px solid #FF6600;
+}
+.book-content{
+ width: 55%;
+ min-width: 200px;
+ max-width: 600px;
+ height: 360px;
+ position: relative;
+ perspective: 1000px;
+ transition: 1s;
+
+}
+h4{
+ height:70px;
+}
+
+ul{
+ display:block;
+ position:fixed;
+ left: 25px;
+ top:70px;
+ font-size: 15px;
+ font-weight:bold;
+}
+
+}
+
+ @media screen and (min-width:901px) and (max-width:1445px){
+p{
+ font-size: 12px;
+}
+
+.book-content{
+ min-width: 250px;
+ max-width: 500px;
+ position: relative;
+ perspective: 1000px;
+ transition: 1s;
+
+}
+.book{
+ width:62%;
+}
+
+.contain{
+ height:650px;
+}
+}
+
+@media only screen and (min-width: 450px) and (max-width: 900px) {
+
+.book-content{
+ width: 50%;
+
+ max-width: 600px;
+ height: 360px;
+ position: relative;
+ perspective: 1000px;
+ transition: 1s;
+ margin-left:80px;
+}
+.book{
+   width:72%;
+}
+ .contain{
+ height:500px;
+}
+.about{
+  height:725px;
+
+}
+h4{
+ height:75px;
+
+}
+
+
+ul{
+ display:block;
+ position:fixed;
+ left: 25px;
+ top:70px;
+ font-size: 15px;
+ font-weight:bold;
+}
+.face-front > a{
+  height:110px;
+}
+}
+@media only screen and (max-width: 450px){
+ .face-front > a{
+  height:60px;
+}
+ .book{
+   width:72%;
+}
+.book-content{
+ width: 55%;
+ margin-left:80px;
+ }
+
+}
