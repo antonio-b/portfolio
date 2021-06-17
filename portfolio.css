@@ -55,18 +55,15 @@ body {
 }
 
 #hero-text > div {
-  /*background: linear-gradient(-135deg, #09c9f6, #464646);*/
   padding: 50px;
   font-weight: 500;
-  /* max-width: 50%; */
-  /* margin: 0 auto; */
+  color: white;
   font-size: 3rem;
-  /*box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);*/
 }
 #text {
 	display: inline-block;
 	vertical-align: middle;
-	color: black;
+	color: white;
 	letter-spacing: 2px;
 }
 
