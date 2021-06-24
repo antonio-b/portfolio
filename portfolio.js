@@ -1,10 +1,37 @@
-
-
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+//window.onscroll = function() {stickyNav()};//window scroll starts myFunction
+//const navbar = document.getElementById("nav");//getting the nav
+//const sticky = navbar.offsetTop;//get offset postion of the nav
 
-window.onscroll = function() {stickyNav()};//window scroll starts myFunction
-const navbar = document.getElementById("nav");//getting the nav
-const sticky = navbar.offsetTop;//get offset postion of the nav
+var test = document.querySelector("figure");
+var state = 0;
+test.addEventListener("click", function(){
+if (state == 0){
+  test.style.transform = "rotateY(.13turn)";
+  state = 1;
+}else if (state == 1){
+  test.style.transform = "rotateY(.25turn)";
+  state = 2;
+}else if (state == 2){
+  test.style.transform = "rotateY(.37turn)";
+  state = 3;
+}else if (state == 3){
+  test.style.transform = "rotateY(.49turn)";
+  state = 4;
+}else if (state == 4){
+  test.style.transform = "rotateY(.62turn)";
+  state = 5;
+}else if (state == 5){
+  test.style.transform = "rotateY(.74turn)";
+  state = 6;
+}else if (state == 6){
+  test.style.transform = "rotateY(.88turn)";
+  state = 7;
+}else if (state == 7){
+  test.style.transform = "rotateY(1.0turn)";
+  state = 0;
+}
+})
 
 const cvs = document.querySelector("canvas");
 const c = cvs.getContext("2d");//set canvas to 2d
@@ -35,14 +62,15 @@ class Diamond {
     this.dy = dy;
     this.width = width;
     this.minWidth = width;//set min width to original and max * 3 width
-    this.maxWidth = width * 3;
+    this.maxWidth = width * 2;
 
-    let colorArray = ["#F63609", "#090c0b", "#0d2527", "#267368", "#00b1a0"];
+  //  let colorArray = ["#F63609", "#090c0b", "#0d2527", "#267368", "#00b1a0"];
 
-    this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
+  //  this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
   }
 
   draw = () => {
+
     c.beginPath();
     c.moveTo(this.x, this.y);
     c.lineTo(this.x - this.width / 2, this.y);
@@ -52,7 +80,7 @@ class Diamond {
     c.lineTo(this.x - this.width / 2, this.y);
     c.closePath();
 
-    c.fillStyle = this.color;
+    c.fillStyle = "white";
     c.fill();
 
     this.update();
@@ -97,8 +125,8 @@ class Diamond {
 
 let diamondArray = [];
 
-for (let i = 0; i < 500; i++) {
-  let width = Math.random() * 20 + 4;
+for (let i = 0; i < 600; i++) {
+  let width = Math.random() * 2 + 4;
   let x = Math.random() * window.innerWidth;
   let dx = (Math.random() - 0.5) * 1;
   let y = Math.random() * window.innerHeight;
@@ -119,9 +147,9 @@ animate();
 
 // List of sentences
 var content = [
-	"Front End Developer",
-	"Back End Developer",
-	"Full Stack Developer",
+	//'Antonio Belcher '+'<br> Front End Developer ',
+"Front End Developer",
+"Full Stack Developer"
 ];
 // Current sentence being processed
 var sentence = 0; // Character number of the current sentence being processed
@@ -141,7 +169,7 @@ function Type() {
     clearInterval(interval);
 		setTimeout(function() {
 			interval = setInterval(Delete, 50);
-		}, 1000);
+		}, 5000);
 	}
 }
 // Implements deleting effect
@@ -166,15 +194,15 @@ function Delete() { // Get substring with 1 characater deleted
 interval = setInterval(Type, 100);
 
 
-function stickyNav() {
-      if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky");
-      } else {
-      navbar.classList.remove("sticky");
-      }
-    }
-  window.addEventListener("scroll", stickyNav);
-
+// function stickyNav() {
+//       if (window.pageYOffset >= sticky) {
+//       navbar.classList.add("sticky");
+//       } else {
+//       navbar.classList.remove("sticky");
+//       }
+//     }
+//   window.addEventListener("scroll", stickyNav);
+// -->
 
 const albumPic = document.getElementsByClassName("album");
 const front = document.querySelector('.face-front');
@@ -231,14 +259,38 @@ function flipPage(e){
 
  }
 
- function viewSource(){
-    var source = "<html>";
-    source += document.getElementsByTagName('html')[0].innerHTML;
-    source += "</html>";
-    source = source.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    source = "<pre>"+source+"</pre>";
-    sourceWindow = window.open('','Source of page','height=800,width=800,scrollbars=1,resizable=1');
-    sourceWindow.document.write(source);
-    sourceWindow.document.close();
-    if(window.focus) sourceWindow.focus();
-}
+ //  window.addEventListener('scroll',function() {
+ //     var about = document.querySelector('.about');
+ //
+ //         var top_of_element = document.querySelector(".about").offset().top;
+ //         var bottom_of_element = document.querySelector(".about").offset().top + document.querySelector(this).outerHeight();
+ //         var bottom_of_screen = document.querySelector(".about").scrollTop + document.querySelector(window).innerHeight();
+ //         var top_of_screen = document.querySelector(".about").scrollTop;
+ //
+ //         if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element) && !document.querySelector(this).classList.contains('is-visible')) {
+ //             document.querySelector('.about').classList.add('.is-visible');
+ //         }
+ //
+ // });
+ // reveal point from bottom and top of the window
+ var revealerpoint = 150;
+ window.addEventListener('scroll', reveal);
+ reveal();
+
+ function reveal() {
+
+     var revealers = document.querySelectorAll('.about');
+     for (var i = 0; i < revealers.length; i++) {
+         var windowheight = window.innerHeight;
+         var revealertop = revealers[i].getBoundingClientRect().top;
+         var revealerbottom = revealers[i].getBoundingClientRect().bottom;
+         if (revealertop < windowheight - revealerpoint) {
+             revealers[i].classList.add('is-visible')
+         } else {
+             revealers[i].classList.remove('is-visible');
+         };
+         if (revealerbottom < 0 + revealerpoint) {
+             revealers[i].classList.remove('is-visible');
+         }
+     }
+ };
