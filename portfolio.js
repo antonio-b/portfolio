@@ -259,27 +259,13 @@ function flipPage(e){
 
  }
 
- //  window.addEventListener('scroll',function() {
- //     var about = document.querySelector('.about');
- //
- //         var top_of_element = document.querySelector(".about").offset().top;
- //         var bottom_of_element = document.querySelector(".about").offset().top + document.querySelector(this).outerHeight();
- //         var bottom_of_screen = document.querySelector(".about").scrollTop + document.querySelector(window).innerHeight();
- //         var top_of_screen = document.querySelector(".about").scrollTop;
- //
- //         if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element) && !document.querySelector(this).classList.contains('is-visible')) {
- //             document.querySelector('.about').classList.add('.is-visible');
- //         }
- //
- // });
- // reveal point from bottom and top of the window
  var revealerpoint = 150;
  window.addEventListener('scroll', reveal);
  reveal();
 
  function reveal() {
 
-     var revealers = document.querySelectorAll('.about');
+     var revealers = document.querySelectorAll('.about,.contain, .about_me, .carousel');
      for (var i = 0; i < revealers.length; i++) {
          var windowheight = window.innerHeight;
          var revealertop = revealers[i].getBoundingClientRect().top;
