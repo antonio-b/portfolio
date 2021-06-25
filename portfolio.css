@@ -47,7 +47,8 @@ body {
 //$apothem: 482.842712474619px; // == $item-width / (2 * tan(PI / $n))
 */
 .carousel {
-  padding: 20px;
+
+  padding: 80px;
   perspective: 500px;
   overflow: hidden;
   transition: transform 0.5s ease-in;
@@ -82,6 +83,9 @@ body {
   height:200px;
   width:200px;
 
+}
+.mb-4 >a{
+  font-size: 20px !important;
 }
 .carousel figure img:nth-child(2) {
   transform: rotateY(0.7853981634rad);
@@ -218,17 +222,30 @@ color:white;
 }
 .about {
  background-color: white;
- height: 800px;
+ height: 1000px;
  width:100%;
-
+ margin-top: 40px;
 }
+
 .about_me {
-  width:100%;
- overflow:hidden;
- height:300px;
- padding-top: 50px;
+  display:flex;
+  overflow:hidden;
+  height:400px;
+  padding-top: 50px;
+  margin-top: 50px;
+  margin-bottom:  15px;
+  padding: 45px;
 }
-
+#headshot{
+  font-family: Apple Chancery, cursive, URW Chancery L, cursive;
+  border-radius: 10px;
+  width:100%;
+  height:100%;
+  padding:20px;
+  margin-left:30%;
+  font-size:16px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 h4{
  height:75px;
 }
@@ -320,10 +337,11 @@ footer {
 }
 
 h2 {
-text-align: center;
-margin-bottom:30px;
-margin-top: 30px;
-flex-basis: 100%;
+  font-family: Apple Chancery, cursive, URW Chancery L, cursive;
+  text-align: center;
+  margin-bottom:50px;
+  margin-top: 50px;
+  flex-basis: 100%;
 }
 
 .project{
@@ -509,7 +527,17 @@ ul{
 }
 
 }
-
+@media screen and (max-width:1200px){
+  #headshot{
+    border:1.5px solid black;
+    border-radius: 10px;
+    width:100%;
+    height:100%;
+    padding:20px;
+    margin-left:30%;
+    font-size:12px;
+  }
+}
  @media screen and (min-width:901px) and (max-width:1445px){
 p{
  font-size: 12px;
@@ -530,6 +558,7 @@ p{
 .contain{
  height:650px;
 }
+
 }
 
 @media only screen and (min-width: 450px) and (max-width: 900px) {
@@ -544,16 +573,25 @@ p{
  transition: 1s;
  margin-left:80px;
 }
+#headshot{
+  border:none;
+
+  width:100%;
+  height:100%;
+  padding:20px;
+  margin-left:15%;
+  font-size:16px;
+}
+#fronthead{
+  display:none;
+}
 .book{
    width:72%;
 }
  .contain{
  height:700px;
 }
-.about{
-  height:825px;
 
-}
 h4{
  height:75px;
 
@@ -597,30 +635,39 @@ ul{
  width: 55%;
  margin-left:80px;
  }
-.about_me, .carousel{
-  height:500px;
+.about_me{
+  height:425px;
 }
-.about{
-  height:725px;
-
+.carousel{
+  height:355px;
 }
 .contain{
- height:700px;
+    margin-top:50px;
+ height:550px;
 }
-.about{
-  height:825px;
 
-}
 .images{
   height:200px;
   width:200px;
 
 }
 .carousel figure {
-  margin: 0;
+  margin: 0px;
   width: 300px;
   transform-style: preserve-3d;
   transition: transform 0.5s;
   transform-origin: 50% 50% -482.8427124746px;
+}
+#headshot{
+  border:none;
+width:100%;
+margin:0;
+padding:0;
+font-size:16px;
+  background-color: white;
+  font-weight:bold;
+}
+#fronthead{
+  display:none;
 }
 }

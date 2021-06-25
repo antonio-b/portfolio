@@ -125,8 +125,8 @@ class Diamond {
 
 let diamondArray = [];
 
-for (let i = 0; i < 600; i++) {
-  let width = Math.random() * 2 + 4;
+for (let i = 0; i < 650; i++) {
+  let width = Math.random() * 1 + 4;
   let x = Math.random() * window.innerWidth;
   let dx = (Math.random() - 0.5) * 1;
   let y = Math.random() * window.innerHeight;
