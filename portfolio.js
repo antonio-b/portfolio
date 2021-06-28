@@ -1,12 +1,8 @@
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-//window.onscroll = function() {stickyNav()};//window scroll starts myFunction
-//const navbar = document.getElementById("nav");//getting the nav
-//const sticky = navbar.offsetTop;//get offset postion of the nav
 
 var test = document.querySelector("figure");
 var state = 0;
 test.addEventListener("click", function(){
-if (state == 0){
+if (state === 0){
   test.style.transform = "rotateY(.13turn)";
   state = 1;
 }else if (state == 1){
@@ -63,13 +59,9 @@ class Diamond {
     this.width = width;
     this.minWidth = width;//set min width to original and max * 3 width
     this.maxWidth = width * 2;
-
-  //  let colorArray = ["#F63609", "#090c0b", "#0d2527", "#267368", "#00b1a0"];
-
-  //  this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
   }
 
-  draw = () => {
+  draw() {
 
     c.beginPath();
     c.moveTo(this.x, this.y);
@@ -79,14 +71,13 @@ class Diamond {
     c.lineTo(this.x, this.y - this.width / 2);
     c.lineTo(this.x - this.width / 2, this.y);
     c.closePath();
-
     c.fillStyle = "white";
     c.fill();
 
     this.update();
-  };
+  }
 
-  update = () => {
+  update() {
     if (
       this.x + this.width / 2 >= window.innerWidth ||
       this.x - this.width / 2 <= 0
@@ -120,12 +111,12 @@ class Diamond {
       this.x += 1;
       this.y += 1;
     }
-  };
+  }
 }
 
 let diamondArray = [];
 
-for (let i = 0; i < 650; i++) {
+for (let i = 0; i < 600; i++) {
   let width = Math.random() * 1 + 4;
   let x = Math.random() * window.innerWidth;
   let dx = (Math.random() - 0.5) * 1;
@@ -194,25 +185,12 @@ function Delete() { // Get substring with 1 characater deleted
 interval = setInterval(Type, 100);
 
 
-// function stickyNav() {
-//       if (window.pageYOffset >= sticky) {
-//       navbar.classList.add("sticky");
-//       } else {
-//       navbar.classList.remove("sticky");
-//       }
-//     }
-//   window.addEventListener("scroll", stickyNav);
-// -->
-
 const albumPic = document.getElementsByClassName("album");
 const front = document.querySelector('.face-front');
 const back = document.querySelector('.face-back');
 const flip = document.querySelector('.book-content');
 const uno = document.querySelectorAll('.book');
 const portada = document.querySelectorAll('#portada');
-
-
-
 
 let contZindex = 2;
 let customZindex = 1;
@@ -280,3 +258,21 @@ function flipPage(e){
          }
      }
  };
+
+ var port = document.getElementById("portada");
+
+
+  port.addEventListener('mouseover', function(){
+    // var elem = document.createElement("H2");
+    // var texter = document.createTextNode("Click Here to Explore");
+    // elem.appendChild(texter);
+    // port.appendChild(elem);
+    port.innerHTML = "Click Here";
+
+
+
+})
+
+  port.addEventListener('mouseout', function(){
+  port.innerHTML = "Portfolio";
+  })

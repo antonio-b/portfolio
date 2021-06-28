@@ -1,6 +1,6 @@
 
 html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
@@ -46,8 +46,10 @@ body {
 //$theta: 2 * 3.141592653589793 / 8;
 //$apothem: 482.842712474619px; // == $item-width / (2 * tan(PI / $n))
 */
+h6{
+  font-size: 10px !important;
+}
 .carousel {
-
   padding: 80px;
   perspective: 500px;
   overflow: hidden;
@@ -56,6 +58,7 @@ body {
   flex-direction: column;
   align-items: center;
   height:500px;
+  cursor: pointer;
 }
 .carousel > * {
   flex: 0 0 auto;
@@ -135,6 +138,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.buttontop{
+  position:fixed;
+  bottom:28px;
+  margin-left:-45%;
+  margin-right:55%;
+
 }
 
 #hero-text > div {
@@ -317,14 +327,6 @@ footer {
  /*margin: 5px 2px;*/
  border-radius:50%;
 }
-/*img {
- float: left;
- margin-left: 5px;
- margin-right: 8px;
- display:block;
- border-radius: 15px 50px;
-
-}*/
 
 .myself {
  width:170px;
@@ -357,15 +359,13 @@ h2 {
  overflow:hidden;
 }
 
-/*.divide {
- transform:rotate(05deg);
-}*/
+
 .project_1_img, .project_2_img {
   margin: 15px 5px 15px 5px;
    width:190px;
  height:190px;
  border-radius:5px;
- border:2px solid #FF6600;
+ border:.5px solid #060606;
 }
 
 .contact{
@@ -408,7 +408,7 @@ h2 {
  position: relative;
  perspective: 1000px;
  transition: 1s;
-
+ cursor: pointer;
 
 }
 
@@ -437,7 +437,7 @@ h2 {
 .face-front, .face-back{
  width:100%;
  height:100%;
- background: #ffe3b1;
+ background: #EFEFEF;
  padding: 15px;
  box-sizing: border-box;
  overflow: hidden;
@@ -466,11 +466,24 @@ h2 {
 }
 
 #portada{
- background: url("portfolio.jpg");
+background-color: #D1D1D1;
+z-index: 1;
+font-size: 30px;
+font-weight: bold;
+
 }
+/* #portada < p{
+  margin-top:40%;
+  font-size: 20px;
+
+} */
+ /* #portada:hover{
+
+  background-image: url("sun.jpg");
+} */
 
 #portada-back{
- background: url("sun.jpg");
+ background-color: #D1D1D1;
 }
 
 #portada,#portada-back{
@@ -501,7 +514,7 @@ background-size: 100% 100%;
    width:100px;
  height:100px;
  border-radius:5px;
- border:2px solid #FF6600;
+ border:.5px solid #060606;
 }
 .book-content{
  width: 55%;
@@ -579,7 +592,7 @@ p{
   width:100%;
   height:100%;
   padding:20px;
-  margin-left:15%;
+  margin-left:5%;
   font-size:16px;
 }
 #fronthead{
